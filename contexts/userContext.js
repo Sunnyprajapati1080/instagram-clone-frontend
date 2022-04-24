@@ -23,15 +23,11 @@ const UserState = (props) => {
     formData.append("email", e.target.email.value);
     formData.append("password", e.target.password.value);
     formData.append('profileImg', e.target.profileImg.files[0]);
-    console.log(formData)
-    console.log(process.env.NEXT_PUBLIC_HOST)
     const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/auth/createUser`, {
       method: "POST",
       body: formData
     })
-    console.log(res)
     const resjson = await res.json()
-    console.log(resjson)
     if (resjson.error) {
       return setduplicate(true)
     }
