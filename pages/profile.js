@@ -32,7 +32,7 @@ const Profile = (props) => {
                 </div>
             </div>
 
-            {posts.length === 0 ? <div className='flex flex-col items-center max-w-[500px] mx-auto'> <Link href={"/upload"}><div className='text-center my-[20px] bg-indigo-500 hover:bg-indigo-600 cursor-pointer text-white p-2 w-28 rounded'>Create Post</div></Link> <a href="http://www.freepik.com"><Image src="/empty.jpg" width={500} height={500} alt="no posts!" /></a></div> : <div className='max-w-[900px] p-1 mx-auto grid grid-cols-3 gap-1'>
+            {posts.length === 0 ? <div className='flex flex-col items-center max-w-[500px] mx-auto'> <Link href={"/upload"}><div className='text-center my-[20px] bg-pink-500 hover:bg-pink-600 cursor-pointer text-white p-2 w-28 rounded'>Create Post</div></Link> <a href="http://www.freepik.com"><Image src="/empty.jpg" width={500} height={500} alt="no posts!" /></a></div> : <div className='max-w-[900px] p-1 mx-auto grid grid-cols-3 gap-1'>
                 {posts.map((post, index) => {
                     return <Image onClick={()=>{handlePush(post._id)}} key={index} width={500} height={500} className="object-cover cursor-pointer" src={`${process.env.NEXT_PUBLIC_HOST}/${post.img}`} alt="" />
                 })}
