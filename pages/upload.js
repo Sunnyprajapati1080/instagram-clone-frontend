@@ -50,9 +50,7 @@ const Upload = (props) => {
         })
         const resjson = await res.json()
         if (resjson.success) {
-            setTimeout(()=>{
-                Router.push("/")
-            },1000)
+            Router.push("/")
         }
     }
     const handleOnCancel = () => {
