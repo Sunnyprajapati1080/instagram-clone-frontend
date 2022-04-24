@@ -11,6 +11,7 @@ const Comments = (props) => {
     const handleChange = (e) => {
         setcommentValue(e.target.value)
     }
+    console.log(comments)
     const handleComment = async () => {
         if (commentValue !== "") {
             scrollTo(0, 0)
