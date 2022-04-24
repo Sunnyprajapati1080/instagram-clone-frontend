@@ -25,7 +25,7 @@ export async function getServerSideProps(context) {
   })
   const resjson = await res1.json()
   console.log(resjson)
-  if (resjson.name && resjson.message) {
+  if (resjson.name || resjson.message || resjson.error) {
     return {
         redirect: {
             permanent: false,
