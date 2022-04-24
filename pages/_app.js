@@ -14,12 +14,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <UserState>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
         <meta
           name="description"
-          content="this is a full-stack instgram clone with some functionalities as instgram. i built this instagram clone with nextjs and tailwindcss, nodejs and expressjs and mongodb."
+          content="full-stack social media webapp built with nextjs."
         />
-        <title>Instagram clone</title>
+        <title>microgram</title>
       </Head>
       <Component {...pageProps} />
     </UserState >
